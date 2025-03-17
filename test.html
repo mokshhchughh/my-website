@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Campaign Page</title>
+    
+    <!-- Google Analytics Tracking Code -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHWD094LW3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-BHWD094LW3'); // Replace with your Measurement ID
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Test Campaign!</h1>
+    <p>Click the button below to simulate a signup event:</p>
+    
+    <button id="signup-btn">Sign Up</button>
+
+    <script>
+        document.getElementById('signup-btn').addEventListener('click', () => {
+            gtag('event', 'signup', {
+                method: 'instagram'
+            });
+            alert('Signup event tracked!');
+        });
+    </script>
+</body>
+</html>
